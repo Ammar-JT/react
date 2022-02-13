@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 import Card from "../UI/Card";
-import ExpenseList from "./ExpenseList";
-import './Expenses.css';
 import ExpensesFilter from "./ExpensesFilter";
+import ExpenseList from "./ExpenseList";
+import ExpensesChart from "./ExpensesChart";
+import './Expenses.css';
 
 const Expenses = props => {
     const [filteredYear, setFilterYear] = useState('2020');
@@ -29,7 +30,7 @@ const Expenses = props => {
                 the key attribute is important for browser, so it can know that it's a unique tag,
                 so if a new tag is added no need to update all of them.
              */}
-
+            <ExpensesChart expenses={filteredExpenses}/>
             <ExpenseList items={filteredExpenses}></ExpenseList>
         </Card>
     );

@@ -73,9 +73,10 @@ const ExpenseForm = (props) => {
         event.preventDefault();
         const expenseData = {
             title: enteredTitle,
-            amount: enteredAmount,
-            date: new Date(enteredDate)
+            amount: +enteredAmount,
+            date: new Date(enteredDate),
         };
+        
         console.log(expenseData);
         props.onSaveExpenseData(expenseData);
         //reset the inputs:
@@ -100,7 +101,7 @@ const ExpenseForm = (props) => {
             </div>
         </div>
         <div className="new-expense__actions">
-            <button type="button" onClick={}></button>
+            <button type="button" onClick={props.onCancle}>Cancle</button>
             <button type="submit">Add Expense</button>
         </div>
     </form>

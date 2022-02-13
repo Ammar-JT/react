@@ -31,8 +31,15 @@ const NewExpense = (props) => {
     //saveExpenseDataHandler: is just a custom react and js function
     return(
         <div className="new-expense">
-            {!isEditing && <button onClick={startEditingHandler}>Add New Expense</button>}
-            {isEditing && <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} onCancle={stopEditingHandler} />}
+            {!isEditing && (
+                <button onClick={startEditingHandler}>Add New Expense</button>
+            )}
+            {isEditing && (
+                <ExpenseForm 
+                onSaveExpenseData={saveExpenseDataHandler} 
+                onCancle={stopEditingHandler} 
+                />
+            )}
         </div>
     )
 };
