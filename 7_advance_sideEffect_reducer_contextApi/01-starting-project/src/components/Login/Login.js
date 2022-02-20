@@ -11,6 +11,9 @@ const Login = (props) => {
   const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
 
+  //------------------------------------------------------------
+  //                      useEffect()
+  //------------------------------------------------------------
   /*
   (مشكلة)
   //this way of using useEffect() is perfect if we are validating inputs in the frontend,
@@ -50,6 +53,9 @@ const Login = (props) => {
       clearTimeout(identifier);
     };
   }, [enteredEmail,enteredPassword]);
+  //------------------------------------------------------------
+  //                      End of useEffect()
+  //------------------------------------------------------------
   
 
   const emailChangeHandler = (event) => {
