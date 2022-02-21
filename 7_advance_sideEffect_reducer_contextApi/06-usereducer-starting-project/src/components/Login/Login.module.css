@@ -5,6 +5,19 @@
   padding: 2rem;
 }
 
+.actions {
+  text-align: center;
+}
+
+nes (47 sloc)  752 Bytes
+   
+.login {
+  width: 90%;
+  max-width: 40rem;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
 .control {
   margin: 1rem 0;
   display: flex;
@@ -54,3 +67,4 @@
   }
 
 }
+
